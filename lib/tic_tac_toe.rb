@@ -19,21 +19,30 @@ end
 
 
 def input_to_index(input)
+  input.to_i - 1
 end
 
-def move(board, index)
+def move(board, index, character="X")
+  board[index] = character
 end
 
 def position_taken?(board, index)
+  board[index] != " "
 end
 
 def valid_move?(board, index)
+  index.between?(0, 8) && !position_taken?
 end
 
 def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.chomp!
+  index = input_to_index(input)
+  move(board, index, current_player(board))
 end
 
 def turn_count(board)
+  board.
 end
 
 def current_player(board)
