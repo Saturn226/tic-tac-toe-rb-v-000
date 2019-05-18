@@ -42,10 +42,11 @@ def turn(board)
 end
 
 def turn_count(board)
-  board.
+  board.count{|space| space != " " }
 end
 
 def current_player(board)
+  turn_count.even? ? current_player(board) = "X" : current_player(board) = "O"
 end
 
 def won?(board)
