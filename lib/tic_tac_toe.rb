@@ -49,13 +49,13 @@ def current_player(board)
   turn_count.even? ? current_player(board) = "X" : current_player(board) = "O"
 end
 
-def won?(board)
-  WIN_COMBINATIONS.detect do |combo|
-    position_taken?(board, combo[0] && 
-    board[combo[0]] == board[combo[1]] &&
-    board[combo[1] == board[combo[2]])
-  end
-end
+# def won?(board)
+#   WIN_COMBINATIONS.detect do |combo|
+#     position_taken?(board, combo[0] && 
+#     board[combo[0]] == board[combo[1]] &&
+#     board[combo[1] == board[combo[2]])
+#   end
+# end
 
 def full?(board)
   board.all?{|space| space != " "}
