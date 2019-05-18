@@ -58,12 +58,15 @@ def won?(board)
 end
 
 def full?(board)
+  board.all?{|space| space != " "}
 end
 
 def draw?(board)
+  full?(board) && !won?(board)
 end
 
 def over?(board)
+  draw?(board) || won?(board)
 end
 
 def winner(board)
