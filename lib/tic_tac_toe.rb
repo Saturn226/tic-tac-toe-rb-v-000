@@ -57,20 +57,20 @@ end
 #   end
 # end
 
-def full?(board)
-  board.all?{|space| space != " "}
-end
+# def full?(board)
+#   board.all?{|space| space != " "}
+# end
 
-def draw?(board)
-  full?(board) && !won?(board)
-end
+# def draw?(board)
+#   full?(board) && !won?(board)
+# end
 
-def over?(board)
-  draw?(board) || won?(board)
-end
+# def over?(board)
+#   draw?(board) || won?(board)
+# end
 
-def winner(board)
-  if won?(board)
-    board[won?(board)[0]]
-  end
-end
+# def winner(board)
+#   if won?(board)
+#     board[won?(board)[0]]
+#   end
+# end
